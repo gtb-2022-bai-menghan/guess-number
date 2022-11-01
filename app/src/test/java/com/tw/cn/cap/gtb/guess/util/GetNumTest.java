@@ -12,10 +12,4 @@ class GetNumTest {
         List<Integer> randomNum = GetNum.getRandomNum();
         Assertions.assertNotEquals(List.of(1, 2, 3, 4), randomNum);
     }
-
-    @Test
-    void getGuessNum() {
-        String guessNum = GetNum.getGuessNum("1234");
-        Assertions.assertEquals("1234", guessNum);
-    }
 }
