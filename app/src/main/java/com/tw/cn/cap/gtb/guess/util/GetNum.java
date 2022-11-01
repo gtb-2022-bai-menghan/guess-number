@@ -13,8 +13,9 @@ public class GetNum {
         return ints;
     }
 
-    static public String getGuessNum(String ints) {
+    static public String getGuessNum() {
         System.out.println("Please input your guess number: ");
-        return ints;
+        Scanner ints = new Scanner(System.in);
+        return ints.next();
     }
 }
