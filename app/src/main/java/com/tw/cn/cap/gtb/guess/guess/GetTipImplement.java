@@ -6,7 +6,7 @@ import com.tw.cn.cap.gtb.guess.util.JudgeMethods;
 import java.util.List;
 import java.util.Scanner;
 
-public class GetTipImplement implements GetTip{
+public class GetTipImplement {
     static List<Integer> randomNum = GetNum.getRandomNum();
     Scanner ints = new Scanner(System.in);
     String guessNum = GetNum.getGuessNum(ints.next());
@@ -14,7 +14,6 @@ public class GetTipImplement implements GetTip{
 
     static Integer n = 0;
 
-    @Override
     public String getTipResult(List<Integer> randomNum, String guessNum) {
         for (int i = 0; i < guessNum.length(); i ++) {
             char c = guessNum.charAt(i);
