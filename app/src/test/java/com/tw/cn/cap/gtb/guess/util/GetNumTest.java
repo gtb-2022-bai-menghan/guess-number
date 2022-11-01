@@ -4,11 +4,13 @@ import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 class GetNumTest {
     @Test
     void getRandomNum() {
-        String randomNum = GetNum.getRandomNum();
-        Assertions.assertNotEquals("[1, 2, 3, 4]", randomNum);
+        List<Integer> randomNum = GetNum.getRandomNum();
+        Assertions.assertNotEquals(List.of(1, 2, 3, 4), randomNum);
     }
 
     @Test
