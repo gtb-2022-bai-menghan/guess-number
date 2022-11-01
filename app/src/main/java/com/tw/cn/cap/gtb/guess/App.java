@@ -3,19 +3,21 @@
  */
 package com.tw.cn.cap.gtb.guess;
 
+import com.tw.cn.cap.gtb.guess.guess.GetTipImplement;
+import com.tw.cn.cap.gtb.guess.util.GetNum;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input your guess number: ");
-        System.out.println(scanner.next());
+        String guessNum = GetNum.getGuessNum();
+        List<Integer> randomNum = GetNum.getRandomNum();
+        System.out.println("The random number is: ");
+        System.out.println(randomNum);
+        GetTipImplement getTipImplement = new GetTipImplement();
+        String tipResult = getTipImplement.getTipResult(randomNum, guessNum);
+        System.out.println(tipResult);
     }
 }
