@@ -4,10 +4,13 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 public class GetNum {
-    static public String getRandomNum() {
+    static public List<Integer> getRandomNum() {
         Random random = new Random();
-        IntStream ints = random.ints(4, 0, 9);
-        return Arrays.toString(ints.toArray());
+        List<Integer> ints = new ArrayList<>();
+        for (int i = 0; i < 4; i ++) {
+            ints.add(random.nextInt(10));
+        }
+        return ints;
     }
 
     static public String getGuessNum(String ints) {
