@@ -7,9 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GetTipImplement {
-    static List<Integer> randomNum = GetNum.getRandomNum();
-    Scanner ints = new Scanner(System.in);
-    String guessNum = GetNum.getGuessNum(ints.next());
     static Integer m = 0;
 
     static Integer n = 0;
